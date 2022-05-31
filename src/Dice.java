@@ -106,7 +106,7 @@ public class Dice {
     }
 
     public void upperOnes() {
-        if(ones == -1) {
+        if(ones == -1 || ones == 0) {
             int count = 0;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 1) {
@@ -122,7 +122,7 @@ public class Dice {
     }
 
     public void upperTwos() {
-        if(twos == -1) {
+        if(twos == -1 || twos == 0) {
             int count = 0;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 2) {
@@ -138,7 +138,7 @@ public class Dice {
     }
 
     public void upperThrees() {
-        if(threes == -1) {
+        if(threes == -1 || threes == 0) {
             int count = 0 ;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 3) {
@@ -154,7 +154,7 @@ public class Dice {
     }
 
     public void upperFours() {
-        if(fours == -1) {
+        if(fours == -1 || fours == 0) {
             int count = 0 ;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 4) {
@@ -169,7 +169,7 @@ public class Dice {
     }
 
     public void upperFives() {
-        if(fives == -1) {
+        if(fives == -1 || fives == 0) {
             int count = 0 ;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 5) {
@@ -184,7 +184,7 @@ public class Dice {
     }
 
     public void upperSix() {
-        if(sixes == -1) {
+        if(sixes == -1 || sixes == 0) {
             int count = 0 ;
             for(int i = 0; i < 5; i++) {
                 if(diceArray[i] == 6) {
@@ -202,7 +202,7 @@ public class Dice {
 
     public void checkThreeKind() {
         boolean bool = false;
-        if(threeOfKind == -1) {
+        if(threeOfKind == -1 || threeOfKind == 0) {
             int count = 0;
             for(int i = 0; i < 5; i++) {
                 count = 0;
@@ -234,7 +234,7 @@ public class Dice {
 
     public void checkFourKind() {
         boolean bool = false;
-        if(threeOfKind == -1) {
+        if(threeOfKind == -1 || threeOfKind == 0) {
             int count = 0;
             for(int i = 0; i < 5; i++) {
                 count = 0;
@@ -265,7 +265,7 @@ public class Dice {
     }
 
     public void checkYahtzee() {
-        if(Yahteez == -1) {
+        if(Yahteez == -1 || Yahteez == 0) {
             int first = diceArray[0];
             int count = 0;
             for(int i = 1; i < 5; i++) {
@@ -287,7 +287,7 @@ public class Dice {
     public void checkSmallStraight() {
         Arrays.sort(diceArray);
 
-        if(smallStraight == -1) {
+        if(smallStraight == -1 || smallStraight == 0) {
             String inARow = "1234";
             String inARow2 = "2345";
             String inARow3 = "3456";
@@ -312,7 +312,7 @@ public class Dice {
     public void checkLargeStraight() {
         Arrays.sort(diceArray);
 
-        if(largeStraight == -1) {
+        if(largeStraight == -1 || largeStraight == 0) {
             String inARow = "12345";
             String inARow2 = "23456";
 
@@ -333,7 +333,7 @@ public class Dice {
     }
 
     public void checkChanceAdd() {
-        if(chanceAdd == -1) {
+        if(chanceAdd == -1 || chanceAdd == 0) {
             int chance = 0;
             for(int i = 0; i < 5; i++) {
                 chance += diceArray[i];
@@ -352,7 +352,7 @@ public class Dice {
         }
         Arrays.sort(five);
 
-        if(fullHouse == -1) {
+        if(fullHouse == -1 || fullHouse == 0) {
             int count = 0;
             if(five[0] == five[1] && five[1] == five[2] || five[0] == five[1] && five[2] != five[1]){
                 count++;
